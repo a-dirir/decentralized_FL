@@ -105,10 +105,29 @@ The only requirements is to have python3 and pip installed in your machine.
   ```sh
   git clone https://github.com/a-dirir/decentralized_FL.git
 
-  cd decentralized_FL
   ```
 
+  
+ #### First example (Basic averaging)
 
+```sh
+  cd decentralized_FL/examples/distributed_computation
+  
+  python basic_average.py
+  ```
+
+#### Second example (Train MNIST classifier with Tensorflow)
+Please make sure you have tensorflow installed, it not installed, you can install it using the command:
+```sh
+  pip install tensorflow
+  ```
+
+To run the example
+```sh
+  cd decentralized_FL/examples/federated_learning
+  
+  python fl.py
+  ```
 
 <!-- LICENSE -->
 ## License
