@@ -48,10 +48,10 @@
 Recently, Federated Learning (FL) has gained tremendous traction as it has the ability to provide a privacy-preserving mechanism to train Machine Learning models on hidden data. However, most of today's FL systems are centralized, in which a centralized server is typically used to build the global FL model. 
 
 
-<p align="center">
-  <img src="images/exchanged_blocks.png" alt="Number of exchanged blocks" width="500" height="400">
+<!-- <p align="center">
+<!--   <img src="images/exchanged_blocks.png" alt="Number of exchanged blocks" width="500" height="400">
   <br />
-</p>
+</p>  -->
 
 <!-- GETTING STARTED -->
 ## Getting Started
