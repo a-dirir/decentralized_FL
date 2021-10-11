@@ -101,9 +101,13 @@ The only requirements is to have python3 and pip installed in your machine.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Clone the repo, move to the project directory
+  ```sh
+  git clone https://github.com/a-dirir/decentralized_FL.git
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+  cd decentralized_FL
+  ```
+
 
 
 <!-- LICENSE -->
