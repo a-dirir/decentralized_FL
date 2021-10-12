@@ -48,10 +48,10 @@
 Recently, Federated Learning (FL) has gained tremendous traction as it has the ability to provide a privacy-preserving mechanism to train Machine Learning models on hidden data. However, most of today's FL systems are centralized, in which a centralized server is typically used to build the global FL model. 
 
 
-<p align="center">
-  <img src="images/exchanged_blocks.png" alt="Number of exchanged blocks" width="500" height="400">
+<!-- <p align="center">
+<!--   <img src="images/exchanged_blocks.png" alt="Number of exchanged blocks" width="500" height="400">
   <br />
-</p>
+</p>  -->
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -101,10 +101,33 @@ The only requirements is to have python3 and pip installed in your machine.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. Clone the repo, move to the project directory
+  ```sh
+  git clone https://github.com/a-dirir/decentralized_FL.git
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+  ```
 
+  
+ #### First example (Basic averaging)
+
+```sh
+  cd decentralized_FL/examples/distributed_computation
+  
+  python basic_average.py
+  ```
+
+#### Second example (Train MNIST classifier with Tensorflow)
+Please make sure you have tensorflow installed, it not installed, you can install it using the command:
+```sh
+  pip install tensorflow
+  ```
+
+To run the example
+```sh
+  cd decentralized_FL/examples/federated_learning
+  
+  python fl.py
+  ```
 
 <!-- LICENSE -->
 ## License

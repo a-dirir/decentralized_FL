@@ -12,7 +12,7 @@ from tensorflow.keras.datasets import mnist
 
 from dFL.Peer.client import Client
 from dFL.Peer.node import Node
-from dFL.utils.config import config
+from dFL.Utils.config import config
 from dFL.MainServer.api import ControlServer
 
 # Create the database for the main server if the database does not exist
