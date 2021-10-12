@@ -3,7 +3,7 @@ import requests
 from os import path, mkdir
 from uuid import uuid4
 from cryptography.hazmat.primitives import serialization
-
+from cryptography.hazmat.backends import default_backend
 from dFL.Peer.registration import Registration
 from dFL.Security.communication import SecureCommunication
 from dFL.Security.files import save_peer_file
@@ -18,13 +18,13 @@ main_server_url: str = config['main_server']['url']
 class MainServer:
     def __init__(self):
         signature_key_bytes = c2b(config['main_server']['signature_key'])
-        self.ds_key = serialization.load_pem_public_key(signature_key_bytes).public_bytes(
+        self.ds_key = serialization.load_pem_public_key(signature_key_bytes, backend=default_backend()).public_bytes(
             encoding=serialization.Encoding.PEM,
-            format=serialization.PublicFormat.SubjectPublicKeyInfo
+            format=serialization.PublicFormat.SubjectPublicKeyInfo,
         )
 
         encryption_key_bytes = c2b(config['main_server']['encryption_key'])
-        self.ec_key = serialization.load_pem_public_key(encryption_key_bytes).public_bytes(
+        self.ec_key = serialization.load_pem_public_key(encryption_key_bytes, backend=default_backend()).public_bytes(
             encoding=serialization.Encoding.PEM,
             format=serialization.PublicFormat.SubjectPublicKeyInfo
         )

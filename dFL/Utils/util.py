@@ -9,7 +9,7 @@ def get_logger(name):
     stream_handler = colorlog.StreamHandler()
 
     formatter = colorlog.ColoredFormatter(
-        '%(log_color)s [%(asctime)s]  - %(message)s - [%(name)s %(levelname)s]',
+        '%(log_color)s [%(asctime)s]  - [%(message)s] - [%(name)s %(levelname)s]',
         datefmt=None,
         reset=True,
         log_colors={
@@ -28,6 +28,13 @@ def get_logger(name):
     logger = colorlog.getLogger(name)
     logger.setLevel(logging.INFO)
     logger.addHandler(stream_handler)
+
+    file_handler = logging.FileHandler('logs.log')
+    file_handler.setLevel(logging.INFO)
+
+    file_formatter = logging.Formatter('%(asctime)s;%(message)s')
+    file_handler.setFormatter(file_formatter)
+    logger.addHandler(file_handler)
 
     return logger
 
